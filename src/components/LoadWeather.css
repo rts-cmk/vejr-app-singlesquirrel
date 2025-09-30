@@ -1,0 +1,80 @@
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	padding: 50px;
+	background: light-dark(white, black);
+}
+
+.output-wrapper .link span {
+	cursor: pointer;
+	color: blueviolet;
+	text-decoration: underline;
+}
+
+.output-wrapper > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.output-wrapper > div > div:first-child {
+	display: inherit;
+}
+
+.output-wrapper > div > div:first-child p:last-child {
+	font-size: 3vw;
+}
+
+.output-wrapper > div > div:first-child p:first-child {
+	margin: 0px;
+	font-size: 10vw;
+}
+
+.output-wrapper > div > div:last-child {
+	text-align: right;
+}
+
+.output-wrapper > div > nav {
+	text-align: center;
+}
+
+.output-wrapper > div > nav span {
+	font-weight: bold;
+}
+
+.temperature span:last-child {
+	width: 106px;
+	display: block;
+	font-size: 1.1vw;
+	text-wrap: wrap;
+}
+
+p, h2, h3 {
+	color: light-dark(black, white);
+}
+
+#list {
+	display: flex;
+	padding-top: 10px;
+	list-style-type: none;
+	justify-content: space-between;
+}
+
+#list li p {
+	font-size: 1.25vw;
+}
+
+#list li p span {
+	font-weight: bold;
+}
+
+#list li div p:first-child {
+	margin: 0px;
+	font-size: 5vw;
+}
