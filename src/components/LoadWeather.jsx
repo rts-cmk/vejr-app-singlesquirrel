@@ -42,6 +42,14 @@ export default function LoadWeather({ lat, lon, obj }) {
 		}
 	}
 
+	function returnDayName(idx) {
+		if (idx == 0) {
+			return "i morgen"
+		} else {
+			return `om ${idx} dag(e)`
+		}
+	}
+
 	function returnDays() {
 		let currentArray = []
 		let secondArray = []
@@ -73,10 +81,10 @@ export default function LoadWeather({ lat, lon, obj }) {
 							<p>{returnEmoji(element)}</p>
 							<p>{element.main.temp.toFixed(1)} °C</p>
 							<p>
-								<span>Nedbør:</span> {secondArray[idx]} mm
+								<span>Nedbør:</span> {secondArray[idx].toFixed(2)} mm
 							</p>
 						</div>
-						<p>{element.dt_txt.split(" ")[0]}</p>
+						<p>{returnDayName(idx)} </p>
 					</li>
 				))}
 			</>
