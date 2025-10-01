@@ -26,7 +26,7 @@ export default function LoadWeather({ lat, lon, obj }) {
 
 	function returnRain() {
 		if (currentRain["list"]) {
-			return `${currentRain["list"][0]["pop"]}%`
+			return `${Number(currentRain["list"][0]["pop"] * 100).toFixed(0)}%`
 		} else if (currentWeather["rain"]) {
 			return `${currentWeather["rain"]["3h"]} mm`
 		} else {
